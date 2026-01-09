@@ -1,0 +1,50 @@
+{#
+The file is: templates/base_file.html
+i will use to extends this file mainly
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        🖼️ Remove Watermark
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <header>
+        {% block header_content %}
+        {% endblock %}
+
+        <nav class="nav-bar">
+            <b>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home Page</a></li>
+                    <li><a href="{{ url_for('help_page') }}">Need Help</a></li>
+                    <li><a href="{{ url_for('about_page') }}">About Us</a></li>
+                </ul>
+            </b>
+        </nav>
+
+    </header>
+    <hr>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <hr>
+    <footer>
+        {% block footer_content %}
+        <h4>📌 Demo Footer Section 📌</h4>
+        {% endblock %}
+    </footer>
+    <hr>
+</body>
+
+</html>
