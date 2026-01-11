@@ -1,0 +1,30 @@
+{#
+This is blueprints/profile/templates/profile_page.html
+Here i want to keep the profile about the user who is using the web
+i want to make the html here
+#}
+
+{#
+This is blueprints/profile/templates/profile_page.html
+Here we display the profile of the currently logged-in user 👤
+#}
+
+{% extends 'base_file.html' %}
+
+{% block title %}
+👤 User Profile
+{% endblock %}
+
+{% block content %}
+<h1>🚀 Let's Explore Your Profile</h1>
+
+<h3>
+    🖼️ Here you'll see a list of images
+    that you've processed using our server ⚙️
+</h3>
+
+<hr>
+
+<h1>🚧 This Feature Is Currently Under Development 🚧</h1>
+<p>✨ Stay tuned for exciting updates coming soon!</p>
+{% endblock %}

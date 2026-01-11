@@ -3,6 +3,12 @@ The file is: templates/base_file.html
 i will use to extends this file mainly
 #}
 
+{#
+Here i used the _navbar.html parts
+for showing the navbar
+#}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,15 +27,9 @@ i will use to extends this file mainly
         {% block header_content %}
         {% endblock %}
 
-        <nav class="nav-bar">
-            <b>
-                <ul>
-                    <li><a href="{{ url_for('index') }}">Home Page</a></li>
-                    <li><a href="{{ url_for('help_page') }}">Need Help</a></li>
-                    <li><a href="{{ url_for('about_page') }}">About Us</a></li>
-                </ul>
-            </b>
-        </nav>
+
+        {% include 'partials/_navbar.html' %}
+
 
     </header>
     <hr>
