@@ -11,11 +11,12 @@ sys.dont_write_bytecode = True
 from flask import Flask
 
 
+from blueprints.games.routes import games_bp
 from blueprints.general.routes import general_bp
 from blueprints.profile.routes import profile_bp
 
 
-from utils.config_settings import FLASK_DEBUG, FLASK_HOST, FLASK_PORT
+from utils.config_settings import FLASK_DEBUG, FLASK_HOST, FLASK_PORT, SECRET_KEY
 
 
 app = Flask(
@@ -24,6 +25,10 @@ app = Flask(
     static_folder="static",
 )
 
+app.config["SECRET_KEY"] = SECRET_KEY
+
+
+app.register_blueprint(games_bp, url_prefix="/games")
 app.register_blueprint(general_bp)
 app.register_blueprint(profile_bp, url_prefix="/profile")
 

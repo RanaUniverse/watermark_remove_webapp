@@ -1,0 +1,37 @@
+{#
+this is the
+blueprints/games/templates/index.html
+here i want to keep the main game page from where user will
+able to go to differt page and play some game
+#}
+
+
+{% extends 'base_file.html' %}
+
+{% block title %}
+🧠 Play Brain Games
+{% endblock %}
+
+{% block content %}
+<div class="games-container">
+    <h2>🧠 Brain Games Hub</h2>
+
+    <p>
+        🎮 Welcome to the Brain Games section!
+        Challenge your mind, improve your skills, and have fun while playing.
+    </p>
+
+    <h4>✨ Choose a game to start playing:</h4>
+
+    <ul>
+        <li>➕ <a href="{{ url_for('games_bp.math_game')}}">Math Game</a> — Test your calculation skills 🧮</li>
+        <li>🧠 <a href="/games/memory">Memory Game</a> — Improve your memory power 🧩 (In Development)</li>
+        <li>⚡ <a href="/games/reflex">Reflex Game</a> — Check your reaction speed ⏱️ (In Development)</li>
+        <li>🔤 <a href="/games/word">Word Game</a> — Boost your vocabulary 📚 (In Development)</li>
+    </ul>
+
+    <p>
+        🚀 More exciting games are coming soon. Stay tuned!
+    </p>
+</div>
+{% endblock %}

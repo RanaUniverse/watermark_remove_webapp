@@ -1,0 +1,39 @@
+{#
+this is math.html in the games blueprints
+This will use to shows the question and mcq in the math game sectin
+#}
+
+{% extends 'base_file.html' %}
+
+{% block title %}
+Play A Math Game Now
+{% endblock %}
+
+
+{% block content %}
+<h1> {{ question.question }} </h1>
+
+<form action="{{ url_for('games_bp.math_game') }}" method="post">
+    {{ form.hidden_tag() }}
+
+    <fieldset>
+        <legend>{{ form.answer.label }}</legend>
+
+        <div>
+            {{ form.answer()}}
+        </div>
+        <br>
+        <div>
+            {{ form.submit() }}
+        </div>
+
+    </fieldset>
+
+
+
+</form>
+
+
+
+
+{% endblock %}
