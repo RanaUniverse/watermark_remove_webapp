@@ -1,5 +1,6 @@
 {#
 this is math.html in the games blueprints
+blueprints/games/templates/games/math_game.html
 This will use to shows the question and mcq in the math game sectin
 #}
 
@@ -11,6 +12,10 @@ Play A Math Game Now
 
 
 {% block content %}
+
+<h3>Play a Different Game Now...</h3>
+{% include 'games/partials/_games_menu.html' %}
+
 <h1> {{ question.question }} </h1>
 
 <form action="{{ url_for('games_bp.math_game') }}" method="post">

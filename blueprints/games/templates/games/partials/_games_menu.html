@@ -1,0 +1,15 @@
+{#
+this is the file blueprints/games/templates/games/partials/_games_menu.html
+Here i will write the games components here so that i can easily import in other files
+#}
+
+
+<h4>✨ Choose a game to start playing:</h4>
+
+<ul>
+    <li>➕ <a href="{{ url_for('games_bp.math_game')}}">Math Game</a> — Test your calculation skills 🧮</li>
+    <li>🧠 <a href="{{ url_for('games_bp.word_game') }}">Memory Game</a> — Improve your memory power 🧩 (In
+        Development)</li>
+    <li>🔤 <a href="{{ url_for('games_bp.memory_game') }}">Word Game</a> — Boost your vocabulary 📚 (In Development)
+    </li>
+</ul>

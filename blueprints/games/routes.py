@@ -56,20 +56,25 @@ def rana_learning():
     )
 
 
+
 @games_bp.route("/math", methods=["GET", "POST"])
 def math_game():
     random_question = random.choice(math_questions)
     form = MathAnswerForm()
     options_placeholder: list[str] = random_question["options"]
-    # form.answer.render_kw = {"placeholder": f"Answers Hint: {options_placeholder}"}
     form.answer.render_kw["placeholder"] = f"Answers Hint: {options_placeholder}"
     return render_template(
-        template_name_or_list="games/math.html",
+        template_name_or_list="games/math_game.html",
         form=form,
         question=random_question,
     )
 
 
-@games_bp.route("/knowledge")
-def knowledge_game():
-    return "This is knowledge game section."
+@games_bp.route("/word", methods=["GET", "POST"])
+def word_game():
+    return render_template("games/word_game.html")
+
+
+@games_bp.route("/memory", methods=["GET", "POST"])
+def memory_game():
+    return render_template("games/memory_game.html")
