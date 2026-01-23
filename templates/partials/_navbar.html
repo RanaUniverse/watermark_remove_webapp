@@ -5,13 +5,15 @@ here i will keep the navbar items and easily i will edit this
 
 <nav class="nav-bar">
     <b>
-        
+
         <ul>
             <li><a href="{{ url_for('general_bp.index') }}">🏠 Home</a></li>
             <li><a href="{{ url_for('general_bp.help_page') }}">🆘 Help</a></li>
             <li><a href="{{ url_for('general_bp.about_page') }}">ℹ️ About Us</a></li>
             <li><a href="{{ url_for('profile_bp.index') }}">👤 Profile</a></li>
             <li><a href="{{ url_for('games_bp.index') }}">🎲Play Games</a></li>
+            <li><a href="{{url_for('general_bp.download_song')}}">Test Song</a></li>
+            <li><a href="{{url_for('general_bp.download_image')}}">Test Image</a></li>
         </ul>
 
     </b>

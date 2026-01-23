@@ -1,0 +1,18 @@
+{#
+This page here it will generate a pillow image and shows the image here
+blueprints/color_generate/index.html
+#}
+
+
+{% extends 'base_file.html' %}
+
+{% block title %}
+Get A Demo Image
+{% endblock %}
+
+{% block content %}
+<h1>See The Demo Image</h1>
+
+<a href="{{url_for('color_generate_bp.generate_image')}}">Get A Random Color Image</a>
+
+{% endblock %}

@@ -16,11 +16,11 @@ Play A Math Game Now
 <h3>Play a Different Game Now...</h3>
 {% include 'games/partials/_games_menu.html' %}
 
-<h1> {{ question.question }} </h1>
 
 <form action="{{ url_for('games_bp.math_game') }}" method="post">
     {{ form.hidden_tag() }}
 
+    <h1> {{ question.question }} </h1>
     <fieldset>
         <legend>{{ form.answer.label }}</legend>
 
@@ -33,8 +33,6 @@ Play A Math Game Now
         </div>
 
     </fieldset>
-
-
 
 </form>
 

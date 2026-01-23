@@ -5,7 +5,7 @@ blueprints/games/forms.py
 
 from flask_wtf import FlaskForm  # type: ignore
 
-from wtforms import SubmitField, RadioField, StringField
+from wtforms import SubmitField, RadioField, StringField, HiddenField
 
 from wtforms.validators import DataRequired
 
@@ -28,12 +28,16 @@ class MathAnswerForm(FlaskForm):
     so that it will easy to handle and generate data
     """
 
+    question_id = HiddenField(
+        # render_kw={"id": "math-question-id"},
+    )
     answer = StringField(
         label="Write The Answer",
         validators=[DataRequired()],
         render_kw={
             "placeholder": "Write Here",
             "size": "50",
+            "id": "answer_field",
         },
     )
     submit = SubmitField(label="Submit Your Answer")
